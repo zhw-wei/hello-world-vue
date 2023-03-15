@@ -5,7 +5,7 @@ import service from "@/service";
 export function login(params){
     return service({
         method: 'post',
-        url: '/hello-world/user-info/login',
+        url: '/hello-world-vue/user-info/login',
         data: params
     })
 }
@@ -16,14 +16,14 @@ export function studentList(params){
     let url = createGetParamUrl(params);
     return service({
         method: 'get',
-        url: `/hello-world/user-info/studentList?${url}`
+        url: `/hello-world-vue/user-info/studentList?${url}`
     })
 }
 
 export function deleteStudent(id){
     return service({
         method: 'delete',
-        url: `/hello-world/user-info/deleteStudent?id=${id}`
+        url: `/hello-world-vue/user-info/deleteStudent?id=${id}`
     })
 }
 

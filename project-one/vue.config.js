@@ -7,7 +7,7 @@ module.exports = defineConfig({
         host: 'localhost',
         proxy: {  //配置测试时的跨域代理规则
             '/api': {
-                target: 'http://127.0.0.1:8085',
+                target: 'http://127.0.0.1:8086',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': ''
