@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Header/>
+    <Header/><!-- 头 -->
     <el-container class="content">
-      <Menu/>
+      <Menu/><!-- 左侧链接 -->
       <el-container>
-        <Breadcrumb/>
-        <el-main>
+        <Breadcrumb/><!-- 面包屑 -->
+        <el-main><!-- 内容区域 -->
           <div class="cont">
-            <router-view/>
+            <router-view/><!-- 设置路由出口，否则路由点击不起作用 -->
           </div>
         </el-main>
         <el-footer>
-          <Footer/>
+          <Footer/><!-- 底部-->
         </el-footer>
       </el-container>
     </el-container>
