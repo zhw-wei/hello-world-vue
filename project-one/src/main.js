@@ -14,7 +14,17 @@ Vue.prototype.service = service
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 
+// 路由导航守卫
+router.beforeEach((to, from, next) => {
+    if (!localStorage.getItem('username')) {
+        if (to.path != 'login') {
+            next('login')
+        }else next()
+    }
+    next()
+})
+
 new Vue({
-  router,
-  render: h => h(App),
+    router,
+    render: h => h(App),
 }).$mount('#app')
